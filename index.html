@@ -4,27 +4,51 @@
   </head>
   <body>
     <a-scene>
-        <a-entity position="0 1.6 10"><!-- x altura  z-->
+        <a-entity position="0 0 0"><!-- x altura  z-->
         <a-camera></a-camera>
         </a-entity>
         <a-assets>
-
-           <a-asset-item id="goya-aquelarre-lienzo.obj" src="objs/goya-aquelarre-lienzo.obj"></a-asset-item>
-           <a-asset-item id="crate2-obj" src="objs/goya-aquelarre-marco.01obj.obj"></a-asset-item>
          <!--  <a-asset-item id="crate-mtl" src="crate.mtl"></a-asset-item>--> 
           </a-assets>
-        
           <!-- Using the asset management system. -->
           <!--<a-obj-model src="#goya-aquelarre-lienzo.obj" mtl="#crate-mtl"></a-obj-model>-->
           <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
           <!--<a-obj-model src="objs/goya-aquelarre-lienzo.obj" material="src: textures/goya-aquelarre-l.jpg; color: #696969; roughness: textures/goya-aquelarre-bump.jpg; metalness: 0"></a-obj-model>
           <a-obj-model src="objs/goya-aquelarre-marco.01obj.obj" material="src: textures/goya-aquelarre-marco01-l-color.jpg; color: #696969; roughness:  textures/goya-aquelarre-marco01-bump.jpg; metalness: 0"></a-obj-model>-->
-          <a-obj-model src="objs/pared1.obj" material="src: textures/Pared-1.jpg; color: #696969; roughness:  textures/goya-aquelarre-marco01-bump.jpg; metalness: 0"></a-obj-model>
-          <a-obj-model src="objs/pared2.obj" material="src: textures/Pared-2.jpg; color: #696969; roughness:  textures/goya-aquelarre-marco01-bump.jpg; metalness: 0"></a-obj-model>
-          <a-obj-model src="objs/Suelo.obj" material="src: textures/Suelo.jpg; color: #696969; roughness:  textures/goya-aquelarre-marco01-bump.jpg; metalness: 0"></a-obj-model>
-          <a-obj-model src="objs/Techo.obj" material="src: textures/Techo.jpg; color: #696969; roughness:  textures/goya-aquelarre-marco01-bump.jpg; metalness: 0"></a-obj-model>
-          <a-obj-model src="objs/Cenefa.obj" material="src: textures/Cenefa.jpg; color: #696969; roughness:  textures/goya-aquelarre-marco01-bump.jpg; metalness: 0"></a-obj-model>
-        <a-sky color="#ECECEC"></a-sky>
+          <!--<a-obj-model src="objs/Techo_01.obj" material="src: textures/Techo_01.png; color: #696969;  metalness: 0"></a-obj-model>
+          <a-obj-model src="objs/Techo_central_01.obj" material="src: textures/Techo_central_01.png; color: #696969; metalness: 0"></a-obj-model>
+          <a-obj-model src="objs/Foco.obj" material="src: textures/Foco.png; color: #696969; metalness: 0"></a-obj-model>
+          <a-obj-model src="objs/Pared_01.obj" material="src: textures/Pared_01.png; color: #696969; metalness: 0"></a-obj-model>
+          <a-obj-model src="objs/Suelo_01.obj" material="src: textures/Suelo_01.png; color: #696969; metalness: 0"></a-obj-model>
+          <a-obj-model src="objs/Suelo_02.obj" material="src: textures/Suelo_02.png; color: #696969; metalness: 0"></a-obj-model>
+          <a-obj-model src="objs/Suelo_05.obj" material="src: textures/Suelo_05.png; color: #696969; metalness: 0"></a-obj-model>-->
+
+          <a-obj-model src="assets/obj/puerta.obj" material="src: assets/img/puerta_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/suelo_01.obj" material="src: assets/img/suelo_01_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/suelo_02.obj" material="src: assets/img/suelo_02_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/suelo_03.obj" material="src: assets/img/suelo_03_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/suelo_04.obj" material="src: assets/img/suelo_04_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/suelo_05.obj" material="src: assets/img/suelo_05_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/suelo_06.obj" material="src: assets/img/suelo_06_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_01.obj" material="src: assets/img/pared_01_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_02.obj" material="src: assets/img/pared_02_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_03.obj" material="src: assets/img/pared_03_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_04.obj" material="src: assets/img/pared_04_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_05.obj" material="src: assets/img/pared_05_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_06.obj" material="src: assets/img/pared_06_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_07.obj" material="src: assets/img/pared_07_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_08.obj" material="src: assets/img/pared_08_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_09.obj" material="src: assets/img/pared_09_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/pared_10.obj" material="src: assets/img/pared_10_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/flexos.obj" material="src: assets/img/flexos_color.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/techo_01.obj" material="src: assets/img/techo_01.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/techo_02.obj" material="src: assets/img/techo_02.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/techo_03.obj" material="src: assets/img/techo_03.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/techo_04.obj" material="src: assets/img/techo_04.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/techo_central_01.obj" material="src: assets/img/techo_central_01.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-obj-model src="assets/obj/techo_central_02.obj" material="src: assets/img/techo_central_02.jpg; metalness: 0; shader: flat"></a-obj-model>
+
+          <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
 </html>
