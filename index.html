@@ -40,8 +40,8 @@
   <body>
     <a-scene fog="type: linear; color: black; far: 16; near: 0">
       
-      <a-entity id="camera-rig" position="4.5 0 4.5" animation="">
-        <a-entity camera="" look-controls="" cursor="ray-origin: mouse" raycaster="objects: .clickable" rotation=""></a-entity>
+      <a-entity id="camera-rig" position="4.5 0.1 4.5" animation="">
+        <a-entity camera="" look-controls="" raycaster="objects: .clickable" rotation=""></a-entity>
       </a-entity>
         <a-assets>
          <!--  <a-asset-item id="crate-mtl" src="crate.mtl"></a-asset-item>--> 
@@ -49,12 +49,14 @@
           <!-- Using the asset management system. -->
           <!--<a-obj-model src="#goya-aquelarre-lienzo.obj" mtl="#crate-mtl"></a-obj-model>-->
           <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
-          <!--  Objeto movimiento  --> 
+      
+          <!--  MOVIMIENTO OBJETO  --> 
       
           <a-obj-model class="moveTarget clickable" src="assets/obj/posicion.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-          <a-entity class="moveTarget" position="5 0 1" >
-            <a-entity class="clickable" material="" geometry="" animation__bounceup="" animation__bouncedown=""></a-entity>
+          <a-entity class="moveTarget" position="5 0.1 1" >
+             <a-entity class="clickable" material="" geometry="" animation__bounceup="" animation__bouncedown=""></a-entity>
           </a-entity>
+      
           <!--  SUELO  --> 
       
           <a-obj-model src="assets/obj/suelo_1.a.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
