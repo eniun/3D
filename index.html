@@ -1,20 +1,60 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script>
+      function objectToPos(posObject){
+       return posObject.x + " " + "2" + " " + posObject.z
+       console.log("Prueba4")
+       }
+   function clickHandler(target){
+     console.log("Prueba3")
+     let cameraRig = document.querySelector('#camera-rig')
+   
+     let targetPos = objectToPos( target.getAttribute('position'))
+     let camPos = objectToPos( cameraRig.getAttribute('position'))
+   
+   cameraRig.setAttribute('animation', `property: position; from: ${camPos}; to: ${targetPos}; dur: 700`)
+   }
+   
+   function registerHandlerForClick(target){
+     console.log("Prueba2")
+   target.addEventListener('click', function(){ clickHandler(target)
+   })
+   }
+   function setupHandlers(){
+     console.log("Prueba")
+     let cameraR = document.querySelector('#camera-rig')
+     cameraR.object3D.position.set(1, 2, 3);
+   let targetList = document.querySelectorAll('.moveTarget')
+   let index=0
+   console.log(targetList.length)
+   while( index < targetList.length){
+     registerHandlerForClick(targetList[index])
+   index = index + 1
+   }
+   }
+   
+   window.addEventListener("load",setupHandlers);
+       </script>
   </head>
   <body>
     <a-scene fog="type: linear; color: black; far: 16; near: 0">
       
-        <a-entity position="0 0.1 0"><!-- x altura  z-->
-        <a-camera></a-camera>
-        </a-entity>
+      <a-entity id="camera-rig" position="4.5 0 4.5" animation="">
+        <a-entity camera="" look-controls="" cursor="ray-origin: mouse" raycaster="objects: .clickable" rotation=""></a-entity>
+      </a-entity>
         <a-assets>
          <!--  <a-asset-item id="crate-mtl" src="crate.mtl"></a-asset-item>--> 
           </a-assets>
           <!-- Using the asset management system. -->
           <!--<a-obj-model src="#goya-aquelarre-lienzo.obj" mtl="#crate-mtl"></a-obj-model>-->
           <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
+          <!--  Objeto movimiento  --> 
       
+          <a-obj-model class="moveTarget clickable" src="assets/obj/posicion.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+          <a-entity class="moveTarget" position="5 0 1" >
+            <a-entity class="clickable" material="" geometry="" animation__bounceup="" animation__bouncedown=""></a-entity>
+          </a-entity>
           <!--  SUELO  --> 
       
           <a-obj-model src="assets/obj/suelo_1.a.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
