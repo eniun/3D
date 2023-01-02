@@ -38,6 +38,9 @@
   <body>
     <a-scene fog="type: linear; color: black; far: 16; near: 0">
       
+      <!--  VR CONTROLES  -->
+      < a-entity  laser-controls = "mano: izquierda" > </ a-entity >
+      
            <a-entity id="camera-rig" animation="">
         <a-entity camera="" position="0 1.7 0" look-controls="" cursor="rayOrigin: mouse" raycaster="objects: .clickable" rotation=""></a-entity>
       </a-entity>
@@ -157,10 +160,6 @@
       
             <!--<a-sky color="#ffffff"></a-sky>-->
             <a-scene background="color: black"></a-scene>
-      
-          <!--  VR CONTROLES  -->
-      
-           < a-entity  laser-controls = "mano: izquierda" > </ a-entity >
       
     </a-scene>
   </body>
