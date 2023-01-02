@@ -40,9 +40,8 @@
   <body>
     <a-scene fog="type: linear; color: black; far: 16; near: 0">
       
-            <a-entity id="camera-rig" position="0 0.1 0" animation="">
-        <a-entity camera="" look-controls="" raycaster="objects: .clickable" rotation=""></a-entity>
-        <a-entity camera="" look-controls="" cursor="ray-origin: mouse" raycaster="objects: .clickable" rotation=""></a-entity>
+           <a-entity id="camera-rig" animation="">
+        <a-entity camera="" position="0 -0.8 -3" look-controls="" cursor="ray-origin: mouse" raycaster="objects: .clickable" rotation=""></a-entity>
       </a-entity>
         <a-assets>
          <!--  <a-asset-item id="crate-mtl" src="crate.mtl"></a-asset-item>--> 
@@ -67,10 +66,6 @@
           <a-obj-model class="moveTarget clickable" src="assets/obj/posicion12.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
           <a-obj-model class="moveTarget clickable" src="assets/obj/posicion13.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
           <a-obj-model class="moveTarget clickable" src="assets/obj/posicion14.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-      
-          <a-entity class="moveTarget" position="0 0.1 0" >
-          <a-entity class="clickable" material="" geometry="" animation__bounceup="" animation__bouncedown=""></a-entity>
-          </a-entity>
       
           <!--  SUELO  --> 
       
