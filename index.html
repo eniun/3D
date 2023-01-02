@@ -39,6 +39,7 @@
     <a-scene fog="type: linear; color: black; far: 16; near: 0">
       
       <!--  VR CONTROLES  -->
+      <!--
       < a-entity  laser-controls = "hand: left" > </ a-entity >
       < a-entity  laser-controls = "hand: right" > </ a-entity >
       < a-entity  oculus-touch-controls = "hand: left" > </ a-entity >
@@ -47,7 +48,11 @@
       < a-entity  vive-controls = "hand: right" > </ a-entity >      
       < a-entity  daydream-controls = "hand: right" > </ a-entity >
       < a-entity  gearvr-controls = "hand: right" > </ a-entity > 
-      < a-entity  oculus-go-controls = "hand: right" > </ a-entity >    
+      < a-entity  oculus-go-controls = "hand: right" > </ a-entity >
+       -->
+      
+      <a-entity hand-controls="left"></a-entity>
+      <a-entity hand-controls="right"></a-entity>
       
            <a-entity id="camera-rig" animation="">
         <a-entity camera="" position="0 1.7 0" look-controls="" cursor="rayOrigin: mouse" raycaster="objects: .clickable" rotation=""></a-entity>
