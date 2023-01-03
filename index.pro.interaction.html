@@ -1,89 +1,31 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Escape the Room</title>
-    <meta name="description" content="Escape the Room">
-    <script src="https://cdn.rawgit.com/aframevr/aframe/14027d32/dist/aframe-master.min.js"></script>
-    <script src="https://unpkg.com/super-hands/dist/super-hands.js"></script>
-    <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.js"></script>
-    <script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
-    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
-    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
-    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <title>In-VR Performance</title>
+    <meta name="description" content="In-VR Performance - A-Frame">
+    <script src="../../../dist/aframe-master.js"></script>
+    <script src="components/controller.js"></script>
+    <script src="components/stats-in-vr.js"></script>
   </head>
   <body>
-    <a-scene physics environment="preset: forest">
-      <a-assets>
-        <a-mixin id="gazer" collision-filter="collisionForces: false"></a-mixin>
-        <a-mixin id="pointer" collision-filter="collisionForces: false" 
-                 teleport-controls="cameraRig: #player; collisionEntities: #teleport-range">
-        </a-mixin>
-        <a-mixin id="ctrlr" physics-collider collision-filter="collisionForces: false"
-                 super-hands="colliderEvent: collisions; colliderEventProperty: els; colliderEndEvent: collisions; colliderEndEventProperty: clearedEls"
-                 teleport-controls="cameraRig: #player; collisionEntities: #teleport-range">
-        </a-mixin>
-        <a-mixin id="collider-space" static-body material="visible:false"></a-mixin>
-      </a-assets>
+    <a-scene background="color: #ECECEC">
+      <a-entity controller="hand: left">
+        <a-entity stats-in-vr position="0.47 0 0.08"></a-entity>
+      </a-entity>
+      <a-entity controller="hand: right"></a-entity>
 
-      <a-entity id="player" progressive-controls="objects: [grabbable], [droppable], [clickable];
-                                                  gazeMixin: gazer; pointMixin: pointer; touchMixin: ctrlr">
-        <a-entity id="rightHand" class="right-controller"></a-entity>
-        <a-entity id="leftHand" class="left-controller"></a-entity>
+      <a-entity position="0 0 -1">
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="6" height="6" color="#7BC8A4" shadow="cast: false"></a-plane>
       </a-entity>
-      <a-entity id="finish" position="2.647 0.817 0.019" geometry="width:0.11;depth:0.13;height:0.1" material="visible:false" 
-                clickable="" visible="false" static-body
-                event-set="_event:grab-start; _target:#room; visible: false"></a-entity>
-      <a-entity id="room" gblock="https://vr.google.com/objects/2_ube6QZfr-"
-                position="-0.651 -3.994 -1.343" scale="2.811 2.811 2.811">
-        <a-entity id="bookcase" gblock="https://vr.google.com/objects/4hGQ9QLkud0"
-                  position="0.399 1.034 1.682" rotation="0 87.8 0" scale="0.366 0.407 0.321"
-                  event-set__onshelf="_event: book-secret; _target: #bookonshelf; visible: true"
-                  event-set__held="_event: book-secret; _target: .redbook.wrapper; visible: false"
-                  event-set__finish="_event: book-secret; _target: #finish; visible: true">
-          <a-animation attribute="position" to="0.399 1.064 1.181" dur="3000" begin="book-secret"></a-animation>
-          <a-entity id="bookcase-colliders">
-            <a-entity position="3.347 1.285 1.781" geometry="depth:0.29;height:0.54;width:1.21" mixin="collider-space"></a-entity>
-            <a-entity position="3.332 2.295 1.922" geometry="height:0.5;width:1.19;depth:0.55" mixin="collider-space"></a-entity>
-            <a-entity position="2.898 1.803 1.921" geometry="height:0.51;width:0.34;depth:0.4" mixin="collider-space"></a-entity>
-            <a-entity position="3.591 1.803 1.921" geometry="depth:0.4;height:0.51;width:0.74" mixin="collider-space"></a-entity>
-            <a-entity position="3.14 1.701 2.185" geometry="depth:0.03;height:0.46;width:0.19" mixin="collider-space"></a-entity>
-          </a-entity>
-          <a-entity id="secret" position="3.147 1.787 1.830" geometry="width: 0.13; depth: 0.39; height: 0.44"
-                    material="visible: false" droppable="accepts: .redbook; acceptEvent: book-secret"
-                    static-body collision-filter="collisionForces: false"></a-entity>
-          <a-entity id="bookonshelf" gblock="https://vr.google.com/objects/fkQBGPoS9ek" position="3.537 2.387 1.742" 
-                    visible="false"
-                    rotation="-2.29 88.24 174.18" scale="0.453 0.581 0.477"></a-entity>
-        </a-entity>
-        <a-entity id="table" gblock="https://vr.google.com/objects/bNzHwBCVavl"
-                  static-body
-                  position="-0.299 1.113 0.482" scale="0.505 0.505 0.505"></a-entity>
-        <a-entity  class="redbook wrapper" position="-0.181 1.86 0.608" scale="0.668 0.888 0.798" dynamic-body="mass:0.1"
-                   grabbable draggable>
-          <a-entity class="redbook" gblock="https://vr.google.com/objects/fkQBGPoS9ek"
-                    position="0 -0.253 -0.292"
-                    rotation="90.01166961505233 0 0" scale="0.287 0.287 0.287"></a-entity>
-        </a-entity>
-        <a-entity  class="bluebook" position="-0.181 2 0.608" scale="0.668 0.888 0.798" dynamic-body="mass:0.1"
-                   grabbable draggable>
-          <a-entity class="bluebook" gblock="https://vr.google.com/objects/8xQHBQezK-q"
-                    position="0 -0.253 -0.292"
-                    rotation="90.01166961505233 0 0" scale="0.287 0.287 0.287"></a-entity>
-        </a-entity>
-        <a-entity  class="yellowbook" position="-0.181 2.14 0.608" scale="0.668 0.888 0.798" dynamic-body="mass:0.1"
-                   grabbable draggable>
-          <a-entity class="yellowbook" gblock="https://vr.google.com/objects/0hkwFgYY8ER"
-                    position="0 -0.253 -0.292"
-                    rotation="90.01166961505233 0 0" scale="0.287 0.287 0.287"></a-entity>
-        </a-entity>
-        <!-- coming soon
-        <a-entity id="chest-base" gblock="https://vr.google.com/objects/dIPuyxg1yLF" position="-0.7027642282295026 -1.2458261251449585 -0.11693848618700153"></a-entity>
-        <a-entity id="chest-lid" gblock="https://vr.google.com/objects/43_scTFcV_1" position="-0.539697912370563 -1.3433550596237183 -0.09793451230007522"></a-entity>
-        <a-entity id="key" gblock="https://vr.google.com/objects/9rQqZlcfGgs" position="-1.029776579869878 -1.79975163936615 -0.12727873185314176"></a-entity>
-        -->
-      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
       <a-entity gblock="https://vr.google.com/objects/3Ook4jHoAjW" position="-1.126 -1.32 0.46" rotation="0 -38.9038342893829 0" scale="1.965 1.965 1.965"></a-entity>
       <!-- Ground. -->
       <a-box id="teleport-range" position="0.159 0.05 0.048" material="visible: false" 
