@@ -11,34 +11,6 @@
     <script src="highlight.js"></script>
     <script src="info-panel.js"></script>
     <script>
-      
-   function objectToPos(posObject){
-   return posObject.x + " " + "0" + " " + posObject.z
-   console.log("Prueba4")
-   }
-   function clickHandler(target){
-   console.log("Prueba3")
-   let cameraRig = document.querySelector('#camera-rig')
-   let targetPos = objectToPos( target.getAttribute('position'))
-   let camPos = objectToPos( cameraRig.getAttribute('position'))
-   cameraRig.setAttribute('animation', `property: position; from: ${camPos}; to: ${targetPos}; dur: 700`)
-   }
-   function registerHandlerForClick(target){
-   console.log("Prueba2")
-   target.addEventListener('click', function(){ clickHandler(target)
-   })
-   }
-   function setupHandlers(){
-   console.log("Prueba")
-   let targetList = document.querySelectorAll('.moveTarget')
-   let index=0
-   console.log(targetList.length)
-   while( index < targetList.length){
-   registerHandlerForClick(targetList[index])
-   index = index + 1
-   }
-   }
-   window.addEventListener("load",setupHandlers);
   </head>
       
   <body>
