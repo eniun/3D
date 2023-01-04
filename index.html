@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>v04</title>
+    <title>v05</title>
     <meta name="description" content="Laser input UI • A-Frame">
     <script src="https://eniun.github.io/3D/dist/aframe-master.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
@@ -12,8 +12,7 @@
   </head>
   <body>
     <a-scene
-      background="color: #212"
-      environment
+      background="color: #ffffff"
       cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
       info-message="htmlSrc: #messageText">
      <a-assets>
@@ -84,9 +83,7 @@
           scale="0.001 0.001 0.001"
           geometry="primitive: plane; width: 1.5; height: 1.8"
           material="color: #333333; shader: flat; transparent: false" class="raycastable">
-          <a-entity id="ponyoMovieImage" mixin="movieImage" material="src: #ponyo" visible="false"></a-entity>
           <a-entity id="kazetachinuMovieImage" mixin="movieImage" material="src: #kazetachinu" visible="false"></a-entity>
-          <a-entity id="karigurashiMovieImage" mixin="movieImage" material="src: #karigurashi" visible="false"></a-entity>
           <a-entity id="movieTitle"
             position="-0.68 -0.1 0"
             text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Ponyo (2003)"></a-entity>
