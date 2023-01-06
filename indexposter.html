@@ -22,7 +22,7 @@
     }
   });
         function objectToPos(posObject){
-         return posObject.x + " " + "0" + " " + posObject.z
+         return posObject.x + " " + "1.6" + " " + posObject.z
          console.log("Prueba4")
          }
      function clickHandler(target){
@@ -58,7 +58,7 @@
     <a-scene
       background="color: #212"
       environment
-      cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .clickable"
+      cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
       info-message="htmlSrc: #messageText">
      <a-assets>
       <a-asset-item id="messageText" src="message.html"></a-asset-item>
@@ -113,7 +113,7 @@
       
       <a-entity id="ui" position="0 1.6 -2.5">
         <!-- Poster menu -->
-        <a-entity id="menu" highlight class="moveTarget clickable">
+        <a-entity id="menu" highlight class="moveTarget">
          <a-entity id="kazetachinuButton" position="0 0 0" mixin="frame" class="raycastable menu-button">
           <a-entity material="src: #kazetachinuPoster" mixin="poster"></a-entity>
          </a-entity>
@@ -139,7 +139,7 @@
             text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></a-entity>
         </a-entity>
       </a-entity>
-      <a-obj-model class="moveTarget clickable" position="0 0 -5" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+      <a-obj-model highlight class="moveTarget raycastable" position="0 0 -5" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
          
     </a-scene>
   </body>
