@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>v03</title>
+    <title>v04</title>
     <meta name="description" content="Laser input UI • A-Frame">
     <script src="https://eniun.github.io/3D/dist/aframe-master.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
@@ -70,6 +70,7 @@
        <!--Borde de poster-->
       <a-mixin
         id="frame"
+        class="moveTarget raycastable" 
         geometry="primitive: plane; width: 0.5783552; height: 0.8192"
         material="color: white; shader: flat"
         animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
@@ -79,6 +80,7 @@
       <!--Background de poster-->
        <a-mixin
         id="poster"
+        class="moveTarget raycastable" 
         geometry="primitive: plane; width: 0.544768; height: 0.786432"
         material="color: white; shader: flat"
         material="shader: flat"
@@ -96,11 +98,7 @@
        metalness: 0; 
        shader: flat">
       </a-obj-model>   
-      
-       <!--Nuestra bola
-      <a-obj-model class="moveTarget raycastable" position="0 0 -5" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>    
-      -->
-      
+
     <!-- Background de la escena -->
     <a-entity
       id="background"
