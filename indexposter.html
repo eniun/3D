@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>v04</title>
+    <title>v01</title>
     <meta name="description" content="Laser input UI • A-Frame">
     <script src="https://eniun.github.io/3D/dist/aframe-master.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
@@ -68,24 +68,24 @@
       <img id="kazetachinuPoster" src="https://cdn.aframe.io/examples/ui/kazetachinuPoster.jpg" crossorigin="anonymous"/>
       
        <!--Borde de poster-->
-      <a-mixin
+      <a-obj-model 
         id="frame"
         class="moveTarget raycastable" 
         geometry="primitive: plane; width: 0.5783552; height: 0.8192"
         material="color: white; shader: flat"
         animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
         animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
-       ></a-mixin>
+      </a-obj-model>   
        
       <!--Background de poster-->
-       <a-mixin
+      <a-obj-model 
         id="poster"
         class="moveTarget raycastable" 
         geometry="primitive: plane; width: 0.544768; height: 0.786432"
         material="color: white; shader: flat"
         material="shader: flat"
         position="0 0 0.005"
-       ></a-mixin>   
+      </a-obj-model>     
        
     </a-assets>
       
