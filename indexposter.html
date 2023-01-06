@@ -86,6 +86,15 @@
        ></a-mixin>
     </a-assets>
       
+      <a-obj-model 
+       class="moveTarget raycastable" 
+       position="0 0 -5" 
+       src="assets/obj/posicion00.obj" 
+       material="src: assets/img/suelo_1.a.jpg; 
+       metalness: 0; 
+       shader: flat">
+      </a-obj-model>      
+      
     <!-- Background de la escena -->
     <a-entity
       id="background"
@@ -139,7 +148,6 @@
             text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></a-entity>
         </a-entity>
       </a-entity>
-      <a-obj-model highlight class="moveTarget raycastable" position="0 0 -5" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
          
     </a-scene>
   </body>
