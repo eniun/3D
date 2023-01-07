@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -38,14 +39,14 @@
   <body>
 
   <a-scene
-    background="color: #212"
+    background="color: #ffffff"
     environment
     cursor="rayOrigin: mouse; fuse: true" raycaster="objects: .raycastable">
 
-  <a-entity id="camera-rig" position="0 1.6 0">
-    <a-entity camera></a-entity>
-  </a-entity>
-
+    <a-entity id="camera-rig" animation="">
+      <a-entity camera="" position="0 1.7 0" look-controls="" cursor="rayOrigin: mouse" raycaster="objects: .clickable" rotation=""></a-entity>
+      </a-entity>
+ 
   <a-obj-model class="moveTarget clickable raycastable" position="0 0 -4"       
    src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"> 
   </a-obj-model>
@@ -53,22 +54,24 @@
   <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
   <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
-  <!--MOVIMIENTO OBJETO--> 
-  <a-obj-model class="moveTarget clickable  raycastable" position="0 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="-1.46364 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="-3.69367 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="-5.99347 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="2.59817 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="4.94539 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="6.32658 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="0.612965 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="2.21138 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="4.70904 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="-1.20529 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="-2.77285 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="-5.06129 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="-6.00595 0 -2.99807" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-  <a-obj-model class="moveTarget clickable raycastable" position="6.00595 0 -2.99807" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+
+
+<!--MOVIMIENTO OBJETO--> 
+<a-obj-model class="moveTarget clickable raycastable" position="0 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="-1.46364 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="-3.69367 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="-5.99347 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="2.59817 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="4.94539 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="6.32658 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="0.612965 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="2.21138 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="4.70904 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="-1.20529 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="-2.77285 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="-5.06129 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="-6.00595 0 -2.99807" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+<a-obj-model class="moveTarget clickable raycastable" position="6.00595 0 -2.99807" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
 
   </a-scene>
   </body>
