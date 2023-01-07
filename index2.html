@@ -1,0 +1,102 @@
+<html>
+  <!--
+
+https://www.youtube.com/watch?v=NN0-cg2_k-4
+
+    (c) Copyright 2020 Warwick Molloy, Lokel Digital Pty Ltd
+    Available for use under the MIT License
+  -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+ <script src="https://www.lokeldigital.com/shared-code/a-frame/onclick.js"></script> 
+    <!-- Environment component -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <script>
+      function posForEl(el) {
+        let pos = el.object3D.position
+        return `${pos.x} ${pos.y} ${pos.z}`
+      }
+
+      function moveTo(thing) {
+        let camRig = document.querySelector('#camera-rig')
+        camRig.setAttribute('animation', `property: position; from: ${posForEl(camRig)};to: ${posForEl(this)};dur: 1000`)
+      }
+    </script>
+  </head>
+
+<body>
+  <a-scene>
+
+    <a-assets>
+      <!-- Shapes -->
+       <a-mixin id="webpage" geometry="primitive: box; width: 3; depth:.2; height: 4">
+       </a-mixin>
+      <a-mixin id="ball" geometry="primitive: sphere;radius:1"></a-mixin>
+      <a-mixin id="bigball" geometry="primitive: sphere;radius:1.5"></a-mixin>
+      <a-mixin id="cube" geometry="primitive: box; width: 2; depth:2; height: 2"></a-mixin>
+      <a-mixin id="longbox" geometry="primitive: box; width: 2; depth:4; height: 2"></a-mixin>
+
+      <!-- Positions -->
+       <a-mixin id="fleft-home" position="-4 1.2 -4"></a-mixin>
+      <a-mixin id="fleft" position="-5 1 -5"></a-mixin>
+      <a-mixin id="mid" position="-1 1 0"></a-mixin>
+      <a-mixin id="nright" position="2.5 1.5 2.5"></a-mixin>
+      <a-mixin id="nleft" position="-5 3 3"></a-mixin>
+      <a-mixin id="box-fright" position="3 1 -4"></a-mixin>
+      <a-mixin id="box-nleft" position="-5 1 3"></a-mixin>
+
+      <!-- Behaviour -->
+      <a-mixin id="clickable" onclick="moveTo"></a-mixin>
+      <a-mixin id="bouncy"
+        animation__bounceup="property: position; from: 0 0 0; to: 0 1 0; easing: easeInOutQuad; dur: 500; start-events: click, animationcomplete__bouncedown"
+        animation__bouncedown="property: position; from: 0 1 0; to: 0 0 0; easing: easeInOutQuad; dur: 500; start-events: animationcomplete__bounceup"
+      ></a-mixin>
+
+      <!-- Colors -->
+       <a-mixin id="white" material="color: white"></a-mixin>
+      <a-mixin id="orange" material="color: orange"></a-mixin>
+      <a-mixin id="red" material="color: red"></a-mixin>
+    </a-assets>
+
+    <!-- Obstacles -->
+    <a-entity id="fright-obs" mixin="red longbox box-fright"></a-entity>
+    <a-entity id="nleft-obs" mixin="red box-nleft cube"></a-entity>
+
+    <!-- Spheres -->
+    <!--- f = far back ball --->
+   <a-entity  id="fleft-ball" mixin="fleft clickable">
+      <a-entity mixin="white webpage bouncy"> 
+           <a-text id="webpageText" value="This is a webpage" align="center" color="#000" visible="true" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 1.75" material="color: #fff"></a-text>
+      </a-entity>
+    </a-entity>
+    
+
+    <a-entity  id="mid-ball" mixin="mid clickable">
+      <a-entity  mixin="orange ball bouncy"></a-entity>
+    </a-entity>
+
+    <a-entity  id="nleft-ball" mixin="nleft clickable">
+      <a-entity  mixin="orange ball bouncy"></a-entity>
+    </a-entity>
+
+    <a-entity  id="nright-ball" mixin="nright clickable">
+      <a-entity  mixin="orange bigball bouncy">                 
+
+</a-entity>
+    </a-entity>
+
+    <!-- Camera Rig -->
+    <a-entity id="camera-rig" position="0 1 3">
+      <a-entity camera look-controls position="0 0 4" cursor="ray-origin: mouse" raycaster="objects: [geometry]"></a-entity>
+    </a-entity>
+
+    <a-entity environment></a-entity>
+
+  </a-scene>
+</body>
+
+</html>
