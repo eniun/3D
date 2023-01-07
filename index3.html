@@ -5,6 +5,35 @@
     <title>V05</title>
     <script src="https://eniun.github.io/3D/dist/aframe-master.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
+    <script>
+        function objectToPos(posObject){
+        return posObject.x + " " + "1.6" + " " + posObject.z
+        console.log("Prueba4")
+        }
+        function clickHandler(target){
+        console.log("Prueba3")
+        let cameraRig = document.querySelector('#camera-rig')
+        let targetPos = objectToPos( target.getAttribute('position'))
+        let camPos = objectToPos( cameraRig.getAttribute('position'))
+        cameraRig.setAttribute('animation', `property: position; from: ${camPos}; to: ${targetPos}; dur: 700`)
+        }
+        function registerHandlerForClick(target){
+        console.log("Prueba2")
+        target.addEventListener('click', function(){ clickHandler(target)
+        })
+        }
+        function setupHandlers(){
+        console.log("Prueba")
+        let targetList = document.querySelectorAll('.moveTarget')
+        let index=0
+        console.log(targetList.length)
+        while( index < targetList.length){
+        registerHandlerForClick(targetList[index])
+        index = index + 1
+        }
+        }
+        window.addEventListener("load",setupHandlers);
+       </script>
   </head>
   <body>
 
@@ -13,7 +42,7 @@
     environment
     cursor="rayOrigin: mouse; fuse: true" raycaster="objects: .raycastable">
 
-  <a-entity position="0 1.6 0">
+  <a-entity id="camera-rig" position="0 1.6 0">
     <a-entity camera></a-entity>
   </a-entity>
 
@@ -23,7 +52,7 @@
 
   <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
   <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
-  
+
   </a-scene>
   </body>
 </html>
