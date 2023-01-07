@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>V01</title>
+    <title>V02</title>
     <script src="https://eniun.github.io/3D/dist/aframe-master.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
     <script>
@@ -53,105 +53,22 @@
   <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
   <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
-
-
-<!--MOVIMIENTO OBJETO--> 
-<a-obj-model class="moveTarget clickable" position="0 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="-1.46364 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="-3.69367 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="-5.99347 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="2.59817 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="4.94539 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="6.32658 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="0.612965 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="2.21138 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="4.70904 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="-1.20529 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="-2.77285 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="-5.06129 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="-6.00595 0 -2.99807" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model class="moveTarget clickable" position="6.00595 0 -2.99807" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<!--  SUELO  --> 
-<a-obj-model src="assets/obj/suelo_1.a.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_1.b.obj" material="src: assets/img/suelo_1.b.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_1.c.obj" material="src: assets/img/suelo_1.c.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_1.d.obj" material="src: assets/img/suelo_1.d.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_1.e.obj" material="src: assets/img/suelo_1.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_1.f.obj" material="src: assets/img/suelo_1.f.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_2.a.obj" material="src: assets/img/suelo_2.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_2.b.obj" material="src: assets/img/suelo_2.b.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_2.c.obj" material="src: assets/img/suelo_2.c.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_2.d.obj" material="src: assets/img/suelo_2.d.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_2.e.obj" material="src: assets/img/suelo_2.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_2.f.obj" material="src: assets/img/suelo_2.f.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_3.a.obj" material="src: assets/img/suelo_3.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_3.b.obj" material="src: assets/img/suelo_3.b.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_3.c.obj" material="src: assets/img/suelo_3.c.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_3.d.obj" material="src: assets/img/suelo_3.d.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_3.e.obj" material="src: assets/img/suelo_3.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/suelo_3.f.obj" material="src: assets/img/suelo_3.f.jpg; metalness: 0; shader: flat"></a-obj-model>
-<!--  CUADROS  --> 
-<a-obj-model src="assets/obj/1.vision_fantastica_asmodea.obj" material="src: assets/img/1.vision_fantastica_asmodea.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/2.atropos_las_parcas.obj" material="src: assets/img/2.atropos_las_parcas.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/3.dos_viejos_comiendo_sopa.obj" material="src: assets/img/3.dos_viejos_comiendo_sopa.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/4.un_viejo_y_un_fraile.obj" material="src: assets/img/4.un_viejo_y_un_fraile.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/5.duelo_a_garrotazos_la_rinya.obj" material="src: assets/img/5.duelo_a_garrotazos_la_rinya.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/6.el_aquelarre.obj" material="src: assets/img/6.el_aquelarre.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/7.hombres_leyendo.obj" material="src: assets/img/7.hombres_leyendo.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/8.judith_y_holofernes.obj" material="src: assets/img/8.judith_y_holofernes.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/9.la_romeria_de_san_isidro.obj" material="src: assets/img/9.la_romeria_de_san_isidro.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/10.mujeres_riendo.obj" material="src: assets/img/10.mujeres_riendo.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/11.peregrinacion_a_la_fuente_de_san_isidro.obj" material="src: assets/img/11.peregrinacion_a_la_fuente_de_san_isidro.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/12.perro_semihundido.obj" material="src: assets/img/12.perro_semihundido.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/13.saturno_devorando_a_un_hijo.obj" material="src: assets/img/13.saturno_devorando_a_un_hijo.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/14.una_manola_donya_leocadia_zorrilla.obj" material="src: assets/img/14.una_manola_donya_leocadia_zorrilla.jpg; metalness: 0; shader: flat"></a-obj-model>
-<!--  PARED  --> 
-<a-obj-model src="assets/obj/pared_1.a.n.obj" material="src: assets/img/pared_1.a.n.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_1.a.o.obj" material="src: assets/img/pared_1.a.o.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_1.b.n.obj" material="src: assets/img/pared_1.b.n.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_1.c.n.obj" material="src: assets/img/pared_1.c.n.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_1.d.n.obj" material="src: assets/img/pared_1.d.n.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_1.e.n.obj" material="src: assets/img/pared_1.e.n.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_1.f.e.obj" material="src: assets/img/pared_1.f.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_1.f.n.obj" material="src: assets/img/pared_1.f.n.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_2.f.e.obj" material="src: assets/img/pared_2.f.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_2.g.o.obj" material="src: assets/img/pared_2.g.o.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_3.a.o.obj" material="src: assets/img/pared_3.a.o.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_3.a.s.obj" material="src: assets/img/pared_3.a.s.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_3.b.s.obj" material="src: assets/img/pared_3.b.s.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_3.c.s.obj" material="src: assets/img/pared_3.c.s.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_3.d.s.obj" material="src: assets/img/pared_3.d.s.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_3.e.s.obj" material="src: assets/img/pared_3.e.s.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_3.f.e.obj" material="src: assets/img/pared_3.f.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/pared_3.f.s.obj" material="src: assets/img/pared_3.f.s.jpg; metalness: 0; shader: flat"></a-obj-model> 
-<!--  TECHO  --> 
-<!-- 
-<a-obj-model src="assets/obj/techo_1.a.obj" material="src: assets/img/techo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_1.b.obj" material="src: assets/img/techo_1.b.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_1.c.obj" material="src: assets/img/techo_1.c.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_1.d.obj" material="src: assets/img/techo_1.d.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_1.e.obj" material="src: assets/img/techo_1.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_1.f.obj" material="src: assets/img/techo_1.f.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_2.a.obj" material="src: assets/img/techo_2.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_2.b.obj" material="src: assets/img/techo_2.b.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_2.c.obj" material="src: assets/img/techo_2.c.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_2.d.obj" material="src: assets/img/techo_2.d.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_2.e.obj" material="src: assets/img/techo_2.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_2.f.obj" material="src: assets/img/techo_2.f.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_3.a.obj" material="src: assets/img/techo_3.a.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_3.b.obj" material="src: assets/img/techo_3.b.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_3.c.obj" material="src: assets/img/techo_3.c.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_3.d.obj" material="src: assets/img/techo_3.d.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_3.e.obj" material="src: assets/img/techo_3.e.jpg; metalness: 0; shader: flat"></a-obj-model>
-<a-obj-model src="assets/obj/techo_3.f.obj" material="src: assets/img/techo_3.f.jpg; metalness: 0; shader: flat"></a-obj-model>
---> 
-<!--  PUERTA  -->
-<a-obj-model src="assets/obj/puerta_negra.obj" material="src: assets/img/puerta.jpg; metalness: 0; shader: flat"></a-obj-model>
-<!--  FLEXOS  -->
-<a-obj-model src="assets/obj/flexos.obj" material="src: assets/img/flexos.jpg; metalness: 0; shader: flat"></a-obj-model>
-<!--<a-sky color="#ffffff"></a-sky>-->
-<a-scene background="color: black"></a-scene>
-
+  <!--MOVIMIENTO OBJETO--> 
+  <a-obj-model class="moveTarget clickable" position="0 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="-1.46364 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="-3.69367 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="-5.99347 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="2.59817 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="4.94539 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="6.32658 0 0" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="0.612965 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="2.21138 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="4.70904 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="-1.20529 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="-2.77285 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="-5.06129 0 -5.50148" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="-6.00595 0 -2.99807" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
+  <a-obj-model class="moveTarget clickable" position="6.00595 0 -2.99807" src="assets/obj/posicion00.obj" material="src: assets/img/suelo_1.a.jpg; metalness: 0; shader: flat"></a-obj-model>
 
   </a-scene>
   </body>
