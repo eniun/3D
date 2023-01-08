@@ -27,13 +27,10 @@ AFRAME.registerComponent('cta', {
 
     el.addEventListener('mouseleave', function () {
       el.setAttribute('material', 'color', initialColor);
+      el.setAttribute('material', 'opacity', '0.5');
+      el.setAttribute('material', 'transparent', 'false');
       self.isMouseEnter = false;
     });
   }
 });
 
-
-/** 
-      el.setAttribute('material', 'opacity', '0.5');
-      el.setAttribute('material', 'transparent', 'false');
-*/
