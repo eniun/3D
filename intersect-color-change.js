@@ -12,6 +12,8 @@ AFRAME.registerComponent('intersect-color-change', {
 
     el.addEventListener('mousedown', function (evt) {
       el.setAttribute('material', 'color', '#EF2D5E');
+      el.setAttribute('material', 'opacity', '0.02');
+      el.setAttribute('material', 'transparent', 'true');
     });
 
     el.addEventListener('mouseup', function (evt) {
