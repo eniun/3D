@@ -3,7 +3,7 @@
 /**
  * Change color if entity when intersected by raycaster.
  */
-AFRAME.registerComponent('intersect-color-change', {
+AFRAME.registerComponent('cta', {
   init: function () {
     var el = this.el;
     var material = el.getAttribute('material');
