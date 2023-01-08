@@ -57,7 +57,7 @@
     fuse: true" 
     raycaster="objects: .raycastable">
 
-    <a-entity id="camera-rig" kinematic-body="radius:0.5" fov="0" movement-controls position="0 0 0">
+    <a-entity id="camera-rig" kinematic-body="radius:0.5" movement-controls position="0 0 0">
     <a-entity camera position="0 1.7 0" wasd-controls="acceleration:100" look-controls="pointerLockEnabled: true">      
  
     </a-entity>  
@@ -66,7 +66,7 @@
     </a-entity>
 
     <!--MOVIMIENTO OBJETO--> 
-    <a-obj-model class="moveTarget clickable raycastable" position="0 0 0" src="assets/obj/posicion_s.obj" material="src: assets/img/pisadas.png; metalness: 0; shader: flat"></a-obj-model>
+    <a-obj-model class="moveTarget clickable raycastable" position="0 0 0" src="assets/obj/posicion_s.obj" material="src: assets/img/pisadas.png; metalness: 0; shader: flat; alphaTest: 50"></a-obj-model>
     <a-obj-model class="moveTarget clickable raycastable" position="-1.46364 0 0" src="assets/obj/posicion_s.obj" material="src: assets/img/pisadas.png; metalness: 0; shader: flat"></a-obj-model>
     <a-obj-model class="moveTarget clickable raycastable" position="-3.69367 0 0" src="assets/obj/posicion_s.obj" material="src: assets/img/pisadas.png; metalness: 0; shader: flat"></a-obj-model>
     <a-obj-model class="moveTarget clickable raycastable" position="-5.99347 0 0" src="assets/obj/posicion_s.obj" material="src: assets/img/pisadas.png; metalness: 0; shader: flat"></a-obj-model>
